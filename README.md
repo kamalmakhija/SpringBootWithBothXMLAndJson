@@ -6,3 +6,11 @@
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Jane Doe"}' http://localhost:8080/api/users
 
 curl -X POST -H "Content-Type: application/xml" -d '<User><name>Jane Doe</name></User>' http://localhost:8080/api/users
+
+5. This Project contains Dockerfile and docker-compose.yaml
+6. You can use Dockerfile to create the image if not present in your system already.
+7. You can use docker-compose.yaml to spin the container
+8. For More Detail Refer Note : Docker => Spring Boot APPLICATION 
+9. Docker Image is also Pushed at Docker Hub.
+
+	https://hub.docker.com/repository/docker/kamalmukhija/springbootwithbothxmlandjson_image/general
