@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootwithxmlandjson-deployment-name
+  labels:
+    app: springbootwithxmlandjson-deployment-label
+spec:
+  replicas: 2  # Number of instances you want to run
+  selector:
+    matchLabels:
+      app: springbootwithxmlandjson-pod-label
+  template:
+    metadata:
+      labels:
+        app: springbootwithxmlandjson-pod-label
+    spec:
+      containers:
+        - name: springbootwithxmlandjson-container
+          image: springbootwithbothxmlandjson_image:latest  # Image name in Docker
+          imagePullPolicy: IfNotPresent  # Only pull if the image isn't available locally
+          ports:
+            - containerPort: 8080  # Port that your application is listening on
+
+
